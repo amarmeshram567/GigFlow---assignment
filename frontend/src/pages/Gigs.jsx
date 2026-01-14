@@ -33,7 +33,7 @@ const Gigs = () => {
     }, [search, gigs])
 
     return (
-        <div className="container h-screen mx-auto px-4 py-8">
+        <div className="h-screen mx-auto px-4 py-8">
             {/* Header */}
             <div className="mb-6 flex items-center justify-between">
                 <div className="mb-6">
@@ -56,7 +56,7 @@ const Gigs = () => {
                     <div className="h-5 w-5 animate-spin rounded-full border-4 border-blue-500 border-t-transparent" />
                 </div>
             ) : (
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 pb-10">
+                <div className="grid  gap-6 sm:grid-cols-2 lg:grid-cols-3 pb-10">
                     {filteredGigs.map((gig) => (
                         <GigCard key={gig._id} gig={gig} />
                     ))}

@@ -19,7 +19,7 @@ const createGig = async (req, res) => {
         })
 
         res.status(201).json({
-            success: false,
+            success: true,
             message: "Gig created",
             gig,
         })

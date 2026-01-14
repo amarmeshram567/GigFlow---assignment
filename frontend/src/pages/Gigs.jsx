@@ -33,7 +33,7 @@ const Gigs = () => {
     }, [search, gigs])
 
     return (
-        <div className="h-screen mx-auto px-4 py-8">
+        <div className="min-h-screen mx-auto px-4 py-8">
             {/* Header */}
             <div className="mb-6 flex items-center justify-between">
                 <div className="mb-6">

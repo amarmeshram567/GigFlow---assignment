@@ -163,6 +163,15 @@ const GigDetails = () => {
                                 )
                             }
                         </div>
+
+                        {isOwner && (
+                            <div className="bg-blue-100 text-blue-700 flex items-center justify-center border border-gray-100 rounded-xl p-6 text-center">
+                                <p className="text-primary font-medium">
+                                    This is your gig. Review bids below and hire a freelancer.
+                                </p>
+                            </div>
+                        )}
+
                     </div>
 
                     <div className="space-y-6">
@@ -192,15 +201,8 @@ const GigDetails = () => {
                                 </Link>
                             </div>
                         )}
-
-                        {isOwner && (
-                            <div className="bg-blue-100 text-blue-700 border border-gray-100 rounded-xl p-6 text-center">
-                                <p className="text-primary font-medium">
-                                    This is your gig. Review bids below and hire a freelancer.
-                                </p>
-                            </div>
-                        )}
                     </div>
+
                 </div>
             </main>
         </div>

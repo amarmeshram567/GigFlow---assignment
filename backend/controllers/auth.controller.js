@@ -4,13 +4,6 @@ const User = require("../models/User");
 
 
 
-// const cookieOptions = {
-//     httpOnly: true,
-//     secure: process.env.NODE_ENV === 'production',
-//     sameSite: 'none'
-// }
-
-
 const register = async (req, res) => {
     try {
         const { name, email, password } = req.body;

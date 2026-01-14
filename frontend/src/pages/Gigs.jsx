@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import GigCard from "../components/GigCard";
 import { useAppContext } from "../context/AppContext";
 
@@ -33,7 +32,7 @@ const Gigs = () => {
     }, [search, gigs])
 
     return (
-        <div className="min-h-screen mx-auto px-4 py-8">
+        <div className="min-h-screen mx-auto p-10">
             {/* Header */}
             <div className="mb-6 flex items-center justify-between">
                 <div className="mb-6">

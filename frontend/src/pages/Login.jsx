@@ -1,6 +1,6 @@
 import { Lock, Mail, User } from 'lucide-react';
 import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import toast from 'react-hot-toast';
 import { useAppContext } from '../context/AppContext';
@@ -15,9 +15,6 @@ const Login = () => {
     const [password, setPassword] = useState('')
 
     const navigate = useNavigate()
-    const location = useLocation()
-
-    // const from = location.state?.from?.pathname || "/gigs";
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -28,7 +25,7 @@ const Login = () => {
             })
 
             if (data.success) {
-                navigate("/")
+                navigate("/gigs")
                 setUser(data.user)
                 toast.success(data.message)
             }

@@ -48,56 +48,6 @@ const submitBid = async (req, res) => {
 }
 
 
-// const getBidsForGig = async (req, res) => {
-
-//     try {
-//         const gigId = req.params.gigId;
-//         const userId = req.user.userId
-
-//         const gig = await Gig.findById(gigId)
-
-//         if (!gig) {
-//             return res.status(404).json({
-//                 success: false,
-//                 message: "Gig not found"
-//             })
-//         }
-
-
-//         const ownerId = gig.ownerId._id ? gig.ownerId._id : gig.ownerId;
-
-
-//         if (ownerId.toString() !== userId.toString()) {
-//             return res.status(403).json({
-//                 success: false,
-//                 message: "Forbidden"
-//             })
-//         }
-
-//         // if (!ownerId.equals(userId)) {
-//         //     return res.status(403).json({
-//         //         success: false,
-//         //         message: "Forbidden"
-//         //     })
-//         // }
-
-
-//         const bids = await Bid.find({ gigId: gig._id }).populate("freelancerId", "name email")
-
-//         res.status(200).json({
-//             success: true,
-//             bids
-//         })
-
-//     } catch (error) {
-//         console.log("Error for getBidsForGig controller: ", error.message)
-//         res.status(500).json({
-//             success: false,
-//             message: "Server error"
-//         })
-//     }
-// }
-
 const getBidsForGig = async (req, res) => {
     try {
         const { gigId } = req.params;
